@@ -47,7 +47,7 @@ endif
 
 noremap!        <M-b> <S-Left>
 noremap!        <M-d> <C-O>dw
-cnoremap        <M-d> <S-Right><C-W>
+cnoremap        <M-d> <C-\>esubstitute(getcmdline(), '\%>' . (getcmdpos()-1) . 'c.\s*\f*', '', '')<CR>
 noremap!        <M-BS> <C-W>
 noremap!        <M-f> <S-Right>
 noremap!        <M-n> <Down>
